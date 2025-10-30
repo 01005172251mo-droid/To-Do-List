@@ -1,0 +1,139 @@
+/* نسخة مبسطة - مخليين المهم: الألوان والمكان (الـ layout) */
+
+/* إعداد أساسي */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f4f7fc;
+  display: flex;
+  height: 100vh;
+  color: #222;
+}
+
+#sidebar-content {
+  width: 250px;
+  background: #fff;
+  border-right: 1px solid #e5e7eb;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.Mydayweb h1 {
+  font-size: 22px;
+  color: #2563eb;
+  margin-bottom: 12px;
+}
+
+.Sidebar-button {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.Sidebar-button div {
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.Sidebar-button div i {
+  color: #2563eb;
+}
+
+.addtask {
+  margin-top: auto;
+  text-align: center;
+  background: #2563eb;
+  color: #fff;
+  padding: 12px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#main-content {
+  flex-grow: 1;
+  padding: 24px;
+  overflow-y: auto;
+}
+.page > div {
+  display: none;
+  background: #fff;
+  padding: 18px;
+  border-radius: 10px;
+}
+#Myday {
+  display: block;
+}
+
+#Addtask-page {
+  display: none;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 60%;
+  margin: 30px auto;
+}
+#Addtask-page h3 {
+  color: #2563eb;
+  margin-bottom: 8px;
+}
+#Addtask-page .hint {
+  font-size: 13px;
+  color: gray;
+  margin-bottom: 8px;
+}
+#Addtask-submit {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 9px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#All-Tasks .task-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f9fafb;
+  padding: 10px;
+  border: 1px solid #eaeef2;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+#All-Tasks input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+#All-Tasks b {
+  flex-grow: 1;
+  font-weight: 600;
+}
+#All-Tasks span {
+  font-size: 13px;
+  color: #555;
+}
+
+#clear-tasks {
+  margin-top: 12cm;
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+

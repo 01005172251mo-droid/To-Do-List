@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyDay Web</title>
+    <div class="for icons">
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+    </div>
+    <link rel="stylesheet" href="to-do-list.css">
+  </head>
+  <body>
+    <aside id="sidebar-content">
+      <div class="Sidebar">
+        <div class="Mydayweb">
+          <h1>MyDay Web</h1>
+        </div>
+
+        <div class="Sidebar-button">
+          <div targetpage="Myday">
+            <i class="fa-solid fa-house"></i>
+            My Day
+          </div>
+
+          <div targetpage="Important">
+            <i class="fa-solid fa-star"></i>
+            Important
+          </div>
+          <div targetpage="Planned">
+            <i class="fa-solid fa-calendar-days"></i>
+            Planned
+          </div>
+
+          <div targetpage="All-Tasks">
+            <i class="fa-regular fa-square-check"></i>
+            All Tasks
+          </div>
+        </div>
+        <button id="clear-tasks">Clear All Tasks</button>
+
+      </div>
+    </aside>
+
+    <main id="main-content">
+      <div class="page">
+        <div id="Myday">
+          <i class="fa-solid fa-house"></i>
+          <h2>My Day</h2>
+        </div>
+
+        <div id="Important">
+          <i class="fa-solid fa-star"></i>
+          <h2>Impotant</h2>
+        </div>
+
+        <div id="Planned">
+          <i class="fa-solid fa-calendar-days"></i>
+          <h2>Planned</h2>
+        </div>
+
+        <div id="All-Tasks">
+          <i class="fa-regular fa-square-check"></i>
+          <h2>All Tasks</h2>
+        </div>
+      </div>
+      <div class="addtask" targetpage="Addtask-page">
+        <pre><b>+ Add task</b></pre>
+      </div>
+      
+    </main>
+
+    <div id="Addtask-page">
+      <h3>Add New Task</h3>
+      <p class="hint">
+        Create a new task with details like priority, tags, and due date
+      </p>
+
+      <form action="">
+        <div id="Addtasklabel">
+          <label for="Title">Title</label>
+          <br />
+          <input
+            id="Title"
+            type="text"
+            placeholder="What do you want to do?"
+            required
+          />
+          <p class="hint">
+            Press Enter to add, Shift+Enter to add and stay open
+          </p>
+        </div>
+        <br />
+        <div id="Descriptionlabel">
+          <label for="Description">Description</label>
+          <br />
+          <input
+            type="text"
+            id="Description"
+            placeholder="Add more details..."
+          />
+        </div>
+        <br />
+        <div id="Duedatelabel">
+          <label for="Due-Date">Due date</label>
+          <br />
+          <input type="date" id="Due-Date" required />
+          <br />
+          <p class="hint">pick a date or choose Today / Tomorrow</p>
+        </div>
+        <br />
+        <div id="Prioritylabel">
+          <label for="priority">Priority</label><br />
+
+          <select name="Priority" id="priority">
+            <option value="Low">Low</option>
+            <option value="Medium" selected>Medium</option>
+            <option value="High">High</option>
+          </select>
+        </div>
+
+        <br />
+        <div id="Tagslabel">
+          <label for="tags">Tags</label><br />
+          <input type="text" id="tags" placeholder="Add tags..." />
+          <p class="hint">Press Enter to add tag. Max 6 tags.</p>
+        </div>
+
+        <br />
+
+        <div id="Statuslabel">
+          <label for="status">Status</label><br />
+          <select id="status">
+            <option>To Do</option>
+          </select>
+        </div>
+
+        <br /><br />
+        <input type="submit" value="Add Task" id="Addtask-submit" />
+        <button id="Cancel-btn">Cancel</button>
+      </form>
+    </div>
+    <script src="to-do-list.js"></script>
+  </body>
+</html>
